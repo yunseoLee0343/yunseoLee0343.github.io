@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+</head>
+
+<body>
+    <div class="bg-video">
+        <video class="bg-video__content" autoplay muted loop>
+            <source src="./Background_video.mp4">
+        </video>
+    </div>
+
+    <div class="container">
+        <div class="container_img1"><img class="small-image" id="img1" src="./charImag/char_01_min.gif" alt="error"></div>
+        <div class="container_img2"><img class="small-image" id="img2" src="./charImag/char_02_min.gif" alt="error"></div>
+        <div class="container_img3"><img class="small-image" id="img3" src="./charImag/char_03.png" alt="error"></div>
+        <div class="container_img4"><img class="small-image" id="img4" src="./charImag/char_04_min.gif" alt="error"></div>
+        <div class="container_img5"><img class="small-image" id="img5" src="./charImag/char_05_min.gif" alt="error"></div>
+        <div class="container_img6"><img class="small-image" id="img6" src="./charImag/char_06_min.gif" alt="error"></div>
+        <div class="container_img7"><img class="small-image" id="img7" src="./charImag/char_07_min.GIF" alt="error"></div>
+        <div class="container_img8"><img class="small-image" id="img8" src="./charImag/char_08_min.GIF" alt="error"></div>
+        <div class="container_img9"><img class="small-image" id="img9" src="./charImag/char_09_min.gif" alt="error"></div>
+        <div class="container_img10"><img class="small-image" id="img10" src="./charImag/char_10_min.gif" alt="error"></div>
+    </div>
+
+    <div id="image_popup">
+        <button class="close-btn">X</button> <br>
+        <img id="large-image" src="" alt="">
+    </div>
+
+<style>
+    html {
+        width: 100%;
+        height: 100%;
+    }
+
+    body::-webkit-scrollbar {
+        width: 100%;
+        height: 100%;
+        display: none;
+        overflow: hidden;
+    }
+
+    #container {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<style>
+    .container_img1 {
+        width: 650px;
+        height: 650px;
+        overflow:hidden;
+        margin:0 auto;
+
+        position : absolute;
+        top: 0px;
+        left: 200px;
+    }
+    .container_img2 {
+        width: 650px;
+        height: 650px;
+        overflow:hidden;
+        margin:0 auto;
+
+        position : absolute;
+        top: 2000px;
+        left: 200px;
+    }
+    .container_img3 {
+        width: 650px;
+        height: 650px;
+        overflow:hidden;
+        margin:0 auto;
+
+        position : absolute;
+        top: 800px;
+        left: 1000px;
+    }
+    .container_img4 {
+        width: 650px;
+        height: 650px;
+        overflow:hidden;
+        margin:0 auto;
+
+        position : absolute;
+        top: 300px;
+        left: 1700px;
+    }
+    .container_img5 {
+        width: 650px;
+        height: 650px;
+        overflow:hidden;
+        margin:0 auto;
+
+        position : absolute;
+        top: 700px;
+        left: 2300px;
+    }
+    .container_img6 {
+        width: 650px;
+        height: 650px;
+        overflow:hidden;
+        margin:0 auto;
+
+        position : absolute;
+        top: 2200px;
+        left: 3000px;
+    }
+    .container_img7 {
+        width: 650px;
+        height: 650px;
+        overflow:hidden;
+        margin:0 auto;
+
+        position : absolute;
+        top: 900px;
+        left: 3500px;
+    }
+    .container_img8 {
+        width: 650px;
+        height: 650px;
+        overflow:hidden;
+        margin:0 auto;
+
+        position : absolute;
+        top: 200px;
+        left: 3900px;
+    }
+    .container_img9 {
+        width: 550px;
+        height: 550px;
+        overflow:hidden;
+        margin:0 auto;
+
+        position : absolute;
+        top: 500px;
+        left: 4500px;
+    }
+    .container_img10 {
+        display: flex;
+        width: 650px;
+        height: 650px;
+        overflow:hidden;
+        margin:0 auto;
+        visibility: hidden;
+        
+        position: absolute;
+        top: 1500px;
+        left: 4500px;
+
+        animation-name: move;
+        animation-iteration-count: infinite;
+
+        animation-duration: 40s;
+        animation-timing-function: linear;
+    }
+    .small-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+</style>
+
+<style>
+    @keyframes move {
+        0% {
+            transform: translateX(0px);
+            opacity:1;
+            visibility: visible;
+        }
+
+        90% {
+            opacity:1;
+        }
+
+        90.1% {
+            transform: translateX(-4500px);
+            opacity:0;
+        }
+
+        100% {
+            visibility: hidden;
+            opacity:0;
+        }
+    }  
+</style>
+
+<style>
+    #image_popup {
+        width: 1350px;
+        height: 1350px;
+        border: 1px solid #ffff;
+        background: #ffff;
+        background-color: rgba( 255, 255, 255, 0.5 );
+
+        box-sizing: border-box;
+        padding: 10px;
+
+        position: absolute;
+        top: 75%;
+        left: 86%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+    }
+    #image_popup img {
+        width: 100%;
+        height: 100%;
+    }
+    .close-btn {
+        font-size: 60px;
+        width: 150px;
+        height: 150px;
+
+        position: absolute;
+        left: 90%;
+
+        border-color: #ffff;
+        background-color: #ffff;
+        cursor: pointer;
+    }
+
+</style>
+
+<style>
+    .bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 1;
+    }
+    
+    .bg-video__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; 
+    }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    document.getElementById("image_popup").style.display = 'none';
+
+    $(document).ready(function() {
+        $(".small-image").click(function() {
+            $(".image_popup").hide();
+
+            var path = $(this).attr('src');
+            $('#large-image').attr('src',path);
+
+            $("#image_popup").fadeIn();
+        })
+
+        $(".close-btn").click(function() {
+            $("#image_popup").hide();
+        })
+    })
+</script>
+
+<script>
+    function preload() {
+        for(let i = 0; i < preload.arguments.lenght; i++) {
+            images[i] = new Image();
+            images[i].src = preload.arguments.src;
+        }
+    }
+    preload(
+  "./charImag/char_01_min.gif",
+  "./charImag/char_02_min.gif",
+  "./charImag/char_03.png",
+  "./charImag/char_04_min.gif",
+  "./charImag/char_05_min.gif",
+  "./charImag/char_06_min.gif",
+  "./charImag/char_07_min.GIF",
+  "./charImag/char_08_min.GIF",
+  "./charImag/char_09_min.gif",
+  "./charImag/char_10_min.gif"
+    )
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/gh/hi098123/prism-for-tistory/prism.js"></script>
+</body>
+</html>
